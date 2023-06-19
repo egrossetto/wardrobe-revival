@@ -4,6 +4,7 @@ declare global {
       NEXT_PUBLIC_SUPABASE_PROJECT_URL: string;
       NEXT_PUBLIC_SUPABASE_PROJECT_ANON_KEY: string;
       NEXT_PUBLIC_SUPABASE_IMAGE_URL: string;
+      NEXT_PUBLIC_PHONE_NUMBER: string;
     }
   }
 }

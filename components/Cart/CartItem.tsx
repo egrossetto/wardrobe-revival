@@ -27,7 +27,7 @@ const CartItem = ({ product, onRemove }: Props) => {
   return (
     <div className="flex items-center justify-center">
       <div
-        className={`flex justify-between items-center w-4/5 border-b py-4 transition-opacity duration-500 ${
+        className={`flex justify-between items-center w-1/2 border-b py-4 transition-opacity duration-500 ${
           isRemoving ? "opacity-0" : "opacity-100"
         }`}
       >

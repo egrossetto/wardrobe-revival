@@ -16,7 +16,9 @@ const CartList = () => {
           onRemove={removeFromCart}
         />
       ))}
-      <BuyNowButton products={cartItems} />
+      <div className="flex align-center justify-center mt-2">
+        <BuyNowButton products={cartItems} />
+      </div>
     </div>
   );
 };

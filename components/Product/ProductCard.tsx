@@ -35,16 +35,14 @@ const ProductCard = ({ product }: Props) => {
       <div className="aspect-w-1 aspect-h-1 mb-6 flex-shrink-0">
         <Slider {...settings}>
           {product.images.map((image, index) => (
-            <div key={index}>
-              <Image
-                src={image}
-                alt={product.name}
-                width={350}
-                height={350}
-                className="object-cover rounded-md"
-                priority={false}
-              />
-            </div>
+            <Image
+              key={index}
+              src={image}
+              alt={product.name}
+              width={300}
+              height={300}
+              className="object-cover rounded-md sm:w-1/2 sm:h-auto md:w-3/4 md:h-auto"
+            />
           ))}
         </Slider>
       </div>

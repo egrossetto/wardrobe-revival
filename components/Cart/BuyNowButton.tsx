@@ -6,23 +6,22 @@ type Props = {
 
 const BuyNowButton = ({ products }: Props) => {
   const handleBuyNow = () => {
-    const phoneNumber = "+5491168974853"; // Replace with your WhatsApp phone number
-
-    let message = `I want to buy: \n`; // Customize the message as needed
+    let message = `I want to buy: \n`;
 
     message += products.map((product) => {
       return `${product.name} in size ${product.size} \n`;
     });
 
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message.replaceAll(",", "")
-    )}`;
+    const url = `https://wa.me/${
+      process.env.NEXT_PUBLIC_PHONE_NUMBER
+    }?text=${encodeURIComponent(message.replaceAll(",", ""))}`;
+
     window.open(url, "_blank");
   };
 
   return (
     <button
-      className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+      className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded"
       onClick={handleBuyNow}
     >
       Buy now
