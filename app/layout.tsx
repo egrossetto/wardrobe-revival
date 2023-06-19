@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
