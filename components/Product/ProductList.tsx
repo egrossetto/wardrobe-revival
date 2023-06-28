@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 
 type Props = {
-	serverProducts: DbProduct[];
+	serverProducts: any;
 };
 
 const ProductList = ({ serverProducts }: Props) => {
@@ -14,7 +14,7 @@ const ProductList = ({ serverProducts }: Props) => {
 
 	useEffect(() => {
 		const getProductsData = async () => {
-			const promises = serverProducts.map(async (product) => {
+			const promises = serverProducts.map(async (product: any) => {
 				const { data } = await supabase.storage
 					.from('images-bucket')
 					.list(product.folder_name, {
