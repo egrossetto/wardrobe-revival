@@ -12,7 +12,7 @@ const CartList = () => {
 	return (
 		<div>
 			<div className="flex align-center justify-center mt-2">
-				<h1 className="text-3xl font-bold text-gray-800 mb-4">
+				<h1 className="text-md font-bold text-gray-800 mb-4 md:text-3xl">
 					Your Wardrobe Revival cart{isCartEmpty ? ' is empty.' : '.'}
 				</h1>
 			</div>

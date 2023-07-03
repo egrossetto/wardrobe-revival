@@ -31,16 +31,14 @@ const CartItem = ({ product, onRemove }: Props) => {
 					isRemoving ? 'opacity-0' : 'opacity-100'
 				}`}
 			>
-				<div className="mr-4">
-					<Image
-						src={images[0]}
-						alt={name}
-						width={120}
-						height={500}
-						className="h-auto w-auto rounded"
-						priority={false}
-					/>
-				</div>
+				<Image
+					src={images[0]}
+					alt={name}
+					width={200}
+					height={200}
+					priority={false}
+					className="w-auto h-auto rounded mr-4"
+				/>
 				<div className="flex flex-col flex-grow items-center justify-center">
 					<h2 className="font-semibold mb-2">{name}</h2>
 					<p className="text-gray-600 mb-2">{description}</p>
